@@ -6,7 +6,7 @@ interface CustomersSayCardProps extends HTMLAttributes<HTMLDivElement> {
   customerImg: string;
   customerName: string;
   testimonial: string;
-};
+}
 
 const CustomersSayCard: FC<CustomersSayCardProps> = ({
   rating,

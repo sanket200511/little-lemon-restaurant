@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import "@testing-library/jest-dom";
 import { ReactElement } from "react";
 import { BrowserRouter } from "react-router-dom";

@@ -7,7 +7,7 @@ interface SpecialFoodCardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   price: number;
-};
+}
 
 const SpecialFoodCard: FC<SpecialFoodCardProps> = ({ imageUrl, title, price, description, ...props }): JSX.Element => {
 

@@ -5,7 +5,7 @@ import MobileNav from "../MobileNav";
 
 const Header: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
   const headerRef: MutableRefObject<HTMLElement | null> = useRef(null);
-  const [_, setLastScrollPosition] = useState(window.pageYOffset || document.documentElement.scrollTop);
+  const [, setLastScrollPosition] = useState(window.pageYOffset || document.documentElement.scrollTop);
 
   const handleScroll = () => {
     const header = headerRef.current;
@@ -18,7 +18,7 @@ const Header: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
         header.style.transform = "translateY(-200px)";
       } else {
         header.style.transform = "translateY(0)";
-      };
+      }
       return scrollPosition > 0 ? scrollPosition : 0;
     });
   };

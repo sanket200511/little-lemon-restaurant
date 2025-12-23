@@ -10,7 +10,7 @@ interface BookingFormProps extends HTMLAttributes<HTMLDivElement> {
   availableTimes: {
     times: string[];
   };
-};
+}
 
 const BookingForm: FC<BookingFormProps> = ({ availableTimes, dispatch, ...props }): JSX.Element => {
   const navigate: NavigateFunction = useNavigate();
@@ -28,7 +28,7 @@ const BookingForm: FC<BookingFormProps> = ({ availableTimes, dispatch, ...props 
         localStorage.setItem("Bookings", JSON.stringify(values));
         navigate("/confirmation");
         // console.log(values);
-      };
+      }
     },
     validationSchema: Yup.object({
       date: Yup.date().required("Date is required"),
@@ -40,7 +40,7 @@ const BookingForm: FC<BookingFormProps> = ({ availableTimes, dispatch, ...props 
 
   useEffect(() => {
     dispatch({ type: "UPDATE_TIMES", date: new Date(formik.values.date) });
-  }, [formik.values.date]);
+  }, [formik.values.date, dispatch]);
 
   return (
     <Container {...props} id="menu">

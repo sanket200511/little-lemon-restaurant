@@ -11,7 +11,7 @@ const ConfirmedBooking: FC<HTMLAttributes<HTMLDivElement>> = (props): JSX.Elemen
     const booking = localStorage.getItem("Bookings");
     if (booking) {
       setBooking(JSON.parse(booking));
-    };
+    }
   }, []);
 
   return (
